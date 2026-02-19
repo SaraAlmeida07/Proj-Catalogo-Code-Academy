@@ -5,15 +5,20 @@
 }
 
 body {
-    height:100vh;
+    
+    height:200vh;
     background:linear-gradient(rgb(0, 0, 0), rgb(39, 39, 39));
     color: azure;
 }
- nav{ 
+ nav.main{ 
+    top: 0;
     background-color: rgb(10, 10, 10);
-    
+    width: 100%;
     height: 3rem;
     border-radius: 2px;
+    z-index: 1000;
+    position: fixed;
+    
  }
 
  #logo {
@@ -48,6 +53,7 @@ body {
 }
 
 .banner-container {
+    margin-top: 3rem;
     width: 100%;       
     height: 350px;     
     overflow: hidden;  /* Garante que nada saia fora do retângulo */
@@ -72,9 +78,79 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px; 
-    padding: 40px;
+    padding: 60px;
     max-width: 1200px;
     margin: 0 auto;
     
     
 }
+
+.card {
+    
+    background-color:  rgb(39, 39, 39);
+    border-radius: 0.5rem;
+    align-items: center;
+}
+
+.img-bg {
+    display: flex;
+    height: 250px;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-bg img {
+    max-width: 90%;
+    max-height: 90%; 
+    object-fit: contain; 
+    border-radius: 0.5rem;
+    
+}
+
+.descricao {
+   text-transform: capitalize;
+    padding: 1.5rem;
+}
+
+h3 {
+    margin-bottom: 10px;
+}
+
+p {
+    color: #ccc;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+span.preco {
+    display: block;
+    margin-top: 1rem;
+    font-weight: bold;
+    color:#a66621;
+}
+nav.filtro{
+    padding-top: 3rem;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 3rem;
+    border-radius: 2px;
+}
+
+#filter{
+    list-style: none;
+    float: right;
+    margin-top: 17px;
+}
+
+.cat {
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.cat a {
+    color: #fff;
+
+}
+
